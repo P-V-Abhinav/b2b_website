@@ -20,7 +20,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "Build2Break 2025|Infinium",
+  title: "Build2Break 2025|Infinium ",
 };
 
 export default function RootLayout({

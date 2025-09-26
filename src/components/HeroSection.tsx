@@ -57,9 +57,13 @@ const HeroSection = () => {
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
 
         {/* Event Title */}
-        <h1 className="text-7xl md:text-7xl font-bold mb-4 tracking-tight bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          Build2Break
-        </h1>
+        <Image
+          src="/image.png"
+          alt="Build2Break Logo"
+          width={600}
+          height={120}
+          className="mx-auto mb-4"
+        />
 
         {/* Subtitle */}
         <p className="text-base md:text-base mb-2 font-light opacity-90 text-gray-200">
