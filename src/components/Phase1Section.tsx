@@ -11,7 +11,7 @@ const Phase1Section = () => {
   }, []);
 
   return (
-    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black to-gray-900 z-10">
+    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black to-gray-900 z-10 mb-[100vh]">
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Soft cyan glow */}
@@ -52,8 +52,8 @@ const Phase1Section = () => {
           <Image
             src="/Build.png"
             alt="Build Phase - Perfect Cube"
-            width={400}
-            height={400}
+            width={200}
+            height={200}
             className="mx-auto drop-shadow-2xl"
             style={{
               filter: 'drop-shadow(0 0 40px rgba(34, 211, 238, 0.3))'

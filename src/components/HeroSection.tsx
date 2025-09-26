@@ -91,7 +91,7 @@ const HeroSection = () => {
 
         {/* Register Button */}
   <button className="bg-black hover:bg-blach-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center mx-auto space-x-2">
-          <span>REGISTER TODAY</span>
+          <span>REGISTER</span>
           <svg
             className="w-5 h-5"
             fill="none"

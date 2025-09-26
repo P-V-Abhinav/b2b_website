@@ -22,7 +22,7 @@ const Phase2Section = () => {
   }, []);
 
   return (
-    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-black z-10">
+    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-black z-10 mb-[100vh]">
       {/* Background effects with more dramatic colors */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Red/orange danger glow */}
@@ -81,8 +81,8 @@ const Phase2Section = () => {
             <Image
               src="/Break.png"
               alt="Break Phase - Cracked Cube"
-              width={400}
-              height={400}
+              width={200}
+              height={200}
               className="mx-auto drop-shadow-2xl"
               style={{
                 filter: `drop-shadow(0 0 40px rgba(239, 68, 68, 0.4)) contrast(${1 + crackIntensity * 0.3}) brightness(${1 + crackIntensity * 0.2})`,
