@@ -20,8 +20,7 @@ const exo2 = Exo_2({
 });
 
 export const metadata: Metadata = {
-  title: "Build2Break 2026 - OSDG Hackathon | January 6-9, Las Vegas",
-  description: "Join the premier Build2Break hackathon by OSDG Club. January 6-9, 2026 in Las Vegas, NV. Register now for the opportunity of a lifetime.",
+  title: "Build2Break 2025|Infinium",
 };
 
 export default function RootLayout({
