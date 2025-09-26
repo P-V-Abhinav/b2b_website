@@ -5,7 +5,7 @@ const AboutSection = () => {
   const [slideIn, setSlideIn] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setSlideIn(true), 400); // delay for hero animation
+    setTimeout(() => setSlideIn(true), 600); // delay for hero animation
   }, []);
 
   return (
@@ -17,14 +17,14 @@ const AboutSection = () => {
         <div className="flex flex-row w-full bg-black/60 rounded-t-2xl shadow-xl overflow-hidden font-exo2">
           {/* Stat 1 */}
           <div className="flex-1 flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-bold text-pink-400 font-exo2">1 Lakh</span>
+            <span className="text-3xl md:text-4xl text-pink-400 font-exo2">1 Lakh</span>
             <span className="text-base text-gray-300 mt-2 font-exo2">Prize Pool</span>
           </div>
           {/* Divider */}
           <div className="w-px bg-gradient-to-b from-gray-600 to-gray-900 my-4 mx-2"></div>
           {/* Stat 2 */}
           <div className="flex-1 flex flex-col items-center justify-center">
-            <span className="text-3xl md:text-4xl font-bold text-blue-400 font-exo2">Up to 7 Lakh</span>
+            <span className="text-3xl md:text-4xl text-blue-400 font-exo2">Up to 7 Lakh</span>
             <span className="text-base text-gray-300 mt-2 font-exo2">Incubation for Promising Ideas*</span>
           </div>
         </div>

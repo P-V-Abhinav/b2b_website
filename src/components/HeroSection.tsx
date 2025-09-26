@@ -5,12 +5,30 @@ import Image from "next/image";
 const HeroSection = () => {
   const [showBlue, setShowBlue] = useState(false);
   const [showPink, setShowPink] = useState(false);
+  const [gradientScale, setGradientScale] = useState(0);
+  const [currentView, setCurrentView] = useState(0); // 0 for "Presented by", 1 for "Supported by"
 
   useEffect(() => {
     // Blue rises first
     setTimeout(() => setShowBlue(true), 50);
     // Pink rises after blue starts
     setTimeout(() => setShowPink(true), 650);
+    // Animate gradient scale from 0 to 1
+    let start = 0;
+    const duration = 500;
+    const step = () => {
+      start += 16;
+      setGradientScale(Math.min(start / duration, 1));
+      if (start < duration) requestAnimationFrame(step);
+    };
+    step();
+    
+    // Alternate views every 3 seconds
+    const intervalId = setInterval(() => {
+      setCurrentView(prev => prev === 0 ? 1 : 0);
+    }, 3000);
+    
+    return () => clearInterval(intervalId);
   }, []);
 
   const [mounted, setMounted] = useState(false);
@@ -30,6 +48,8 @@ const HeroSection = () => {
             borderRadius: '50% 50% 0 0',
             boxShadow: '0 0 80px 40px #ff0080',
             zIndex: 0,
+            transform: `scaleY(${gradientScale})`,
+            transformOrigin: 'bottom',
           }}
         ></div>
         {/* Neon Blue - center */}
@@ -41,7 +61,8 @@ const HeroSection = () => {
             borderRadius: '50% 50% 0 0',
             boxShadow: '0 0 80px 40px #00d4ff',
             zIndex: 1,
-            transform: 'translateX(-50%)'
+            transform: `translateX(-50%) scaleY(${gradientScale})`,
+            transformOrigin: 'bottom',
           }}
         ></div>
         {/* Neon Pink - right */}
@@ -53,6 +74,8 @@ const HeroSection = () => {
             borderRadius: '50% 50% 0 0',
             boxShadow: '0 0 80px 40px #ff0080',
             zIndex: 0,
+            transform: `scaleY(${gradientScale})`,
+            transformOrigin: 'bottom',
           }}
         ></div>
       </div>
@@ -70,15 +93,44 @@ const HeroSection = () => {
         />
 
         {/* Subtitle */}
-        <p className="text-base md:text-base mb-2 font-light opacity-90 text-gray-200">
-          Presented by
-        </p>
-
-        {/* Logos below subtitle */}
-        <div className="flex justify-center items-center gap-8 mb-0">
-          <Image src="/BrandLogo.png" alt="OSDG" height={40} width={100} />
-          <span className="text-base md:text-base mb-2 font-light opacity-90 text-gray-200">at</span>
-          <Image src="/inff.png" alt="infinium" height={40} width={100} />
+        <div className="relative h-32 flex flex-col items-center justify-center">
+          {/* View 0 - Presented by */}
+          <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${
+            currentView === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}>
+            <p className="text-base md:text-base mb-3 font-light opacity-90 text-gray-200">
+              Presented by
+            </p>
+            {/* Logos below subtitle */}
+            <div className="flex justify-center items-center gap-6 mb-0 h-16">
+              <div className="w-32 h-14 flex items-center justify-center">
+                <Image src="/BrandLogo.png" alt="OSDG" height={86} width={128} className="max-w-full max-h-full object-contain" />
+              </div>
+              <span className="text-base md:text-base font-light opacity-90 text-gray-200 px-3">at</span>
+              <div className="w-32 h-14 flex items-center justify-center">
+                <Image src="/inff.png" alt="infinium" height={86} width={128} className="max-w-full max-h-full object-contain" />
+              </div>
+            </div>
+          </div>
+          
+          {/* View 1 - Supported by */}
+          <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-700 ease-in-out ${
+            currentView === 1 ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+          }`}>
+            <p className="text-base md:text-base mb-3 font-light opacity-90 text-gray-200">
+              Supported by
+            </p>
+            {/* Logos below subtitle */}
+            <div className="flex justify-center items-center gap-8 mb-0 h-16">
+              <div className="w-32 h-14 flex items-center justify-center">
+                <Image src="/bhashini.png" alt="bhashini" height={86} width={128} className="max-w-full max-h-full object-contain" />
+              </div>
+              <div className="w-8"></div>
+              <div className="w-32 h-14 flex items-center justify-center">
+                <Image src="/cie.png" alt="cie" height={86} width={128} className="max-w-full max-h-full object-contain" />
+              </div>
+            </div>
+          </div>
         </div>
         {/* Date */}
         <h2 className="text-4xl md:text-4xl font-light mb-4 text-gray-100 pt-6 pb-6">
