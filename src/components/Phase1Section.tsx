@@ -11,7 +11,7 @@ const Phase1Section = () => {
   }, []);
 
   return (
-    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black to-gray-900 z-10 mb-[100vh]">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black to-gray-900 z-10">
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Soft cyan glow */}
@@ -33,7 +33,7 @@ const Phase1Section = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto pt-6">
         
         {/* Phase indicator */}
         <div className="mb-6">
@@ -107,7 +107,7 @@ const Phase1Section = () => {
           </div>
         </div>
       </div>
-    </section>
+  </section>
   );
 };
 

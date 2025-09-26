@@ -22,7 +22,7 @@ const Phase2Section = () => {
   }, []);
 
   return (
-    <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-black z-10 mb-[100vh]">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-gray-900 to-black z-20">
       {/* Background effects with more dramatic colors */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Red/orange danger glow */}
@@ -61,7 +61,7 @@ const Phase2Section = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-6xl mx-auto pt-6">
         
         {/* Phase indicator */}
         <div className="mb-6">
@@ -163,7 +163,7 @@ const Phase2Section = () => {
           50% { transform: translateY(-10px); }
         }
       `}</style>
-    </section>
+  </section>
   );
 };
 

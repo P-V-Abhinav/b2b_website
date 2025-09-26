@@ -13,6 +13,10 @@ const HeroSection = () => {
     setTimeout(() => setShowPink(true), 650);
   }, []);
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <section className="sticky top-0 min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black z-10">
       {/* Neon gradients rising from bottom - only inside hero section */}
@@ -85,8 +89,8 @@ const HeroSection = () => {
 
         {/* Description */}
         <div className="mb-12 space-y-4">
-          {/* Countdown Timer */}
-          <CountdownTimer targetDate={new Date('2025-10-04T00:00:00')} />
+          {/* Countdown Timer - only render on client to avoid hydration error */}
+          {mounted && <CountdownTimer targetDate={new Date('2025-10-04T00:00:00')} />}
         </div>
 
         {/* Register Button */}

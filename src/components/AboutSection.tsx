@@ -11,7 +11,7 @@ const AboutSection = () => {
   return (
     <section
       className={`relative z-30 -mt-[15vh] pb-20 transition-transform duration-1000 ${slideIn ? 'translate-y-0' : 'translate-y-[40vh]'} bg-black`}
-      style={{ borderTopLeftRadius: '2rem', borderTopRightRadius: '2rem' }}
+      style={{ borderTopLeftRadius: '8rem', borderTopRightRadius: '8rem' }}
     >
       <div className="flex justify-center items-center mx-auto w-full max-w-2xl py-8">
         <div className="flex flex-row w-full bg-black/60 rounded-t-2xl shadow-xl overflow-hidden font-exo2">
