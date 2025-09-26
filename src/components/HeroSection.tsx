@@ -74,7 +74,7 @@ const HeroSection = () => {
         <div className="flex justify-center items-center gap-8 mb-0">
           <Image src="/BrandLogo.png" alt="OSDG" height={40} width={100} />
           <span className="text-base md:text-base mb-2 font-light opacity-90 text-gray-200">at</span>
-          <Image src="/UA.png" alt="infinium" height={40} width={100} />
+          <Image src="/inff.png" alt="infinium" height={40} width={100} />
         </div>
         {/* Date */}
         <h2 className="text-4xl md:text-5xl font-light mb-4 text-gray-100">
@@ -93,7 +93,7 @@ const HeroSection = () => {
         </div>
 
         {/* Register Button */}
-        <button className="bg-gradient-to-r from-pink-500 to-cyan-400 hover:from-pink-400 hover:to-cyan-300 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/25 flex items-center mx-auto space-x-2">
+  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center mx-auto space-x-2">
           <span>REGISTER TODAY</span>
           <svg
             className="w-5 h-5"
