@@ -77,14 +77,11 @@ const HeroSection = () => {
           <Image src="/inff.png" alt="infinium" height={40} width={100} />
         </div>
         {/* Date */}
-        <h2 className="text-4xl md:text-5xl font-light mb-4 text-gray-100">
-          October 4-5 2025
+        <h2 className="text-4xl md:text-4xl font-light mb-4 text-gray-100 pt-6 pb-6">
+          October 4-5 | IIIT Hyderabad
         </h2>
 
-        {/* Location */}
-        <h3 className="text-2xl md:text-4xl font-light mb-8 text-gray-200">
-          IIIT Hyderabad
-        </h3>
+        
 
         {/* Description */}
         <div className="mb-12 space-y-4">
@@ -93,7 +90,7 @@ const HeroSection = () => {
         </div>
 
         {/* Register Button */}
-  <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center mx-auto space-x-2">
+  <button className="bg-black hover:bg-blach-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center mx-auto space-x-2">
           <span>REGISTER TODAY</span>
           <svg
             className="w-5 h-5"
